@@ -17,20 +17,19 @@ class AddNew extends Component {
         return (
             <div className="searchBar" >
                 <h4>Other Party:</h4>
-                <input placeholder=" Search... " type="text" onChange={this.onKeyDown} value={this.state.inputText}></input>
+                <input placeholder=" Search... " type="text" onChange={this.onKeyPress} value={this.state.inputText}></input>
             </div>
         )
     }
 
     onKeyPress = (event) => {
-        console.log("Key Pressed: " + event.target.value);
         let typedText = event.target.value;
         const charsArray = "(`~$%^&*+=[]{ }<>?/|\\)".split("");
         let inputTextCheckFail = false;
-        let checkTypedText = "";
+        let checkTypedChar = "";
         for (let item of charsArray) {
-            if (typedText.length !== 0) { checkTypedText = typedText[typedText.length - 1] }
-            if (checkTypedText === item) {
+            if (typedText.length !== 0) { checkTypedChar = typedText[typedText.length - 1] }
+            if (checkTypedChar === item) {
                 inputTextCheckFail = true;
                 break;
             }
@@ -49,7 +48,7 @@ class AddNew extends Component {
         return (
             <div className="componentSpace">
                 <h3>Class Component:</h3>
-                <p>Add New Contact</p>
+                <p>Other Party Special Chars Prevention</p>
                 {this.createUI()}
             </div>
         )

@@ -51,8 +51,8 @@ function App() {
       <ContactCard />
       <AddNew />
       <FormCustom myStyles={myStyles} />
-      <GoogleMap initLatitude={initLatitude} initLongitude={initLongitude}/>
-      
+      <GoogleMap initLatitude={initLatitude} initLongitude={initLongitude} />
+
     </div>
 
 
