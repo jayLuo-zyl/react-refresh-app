@@ -32,7 +32,13 @@ const GoogleMap = ({ initLatitude, initLongitude }) => {
 
     const handleChange = (event) => {
         setInputValue(event.target.value);
-      }
+    }
+
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            googleSearch();
+        }
+    }
 
     return (
         <div className="componentSpace">
@@ -41,11 +47,11 @@ const GoogleMap = ({ initLatitude, initLongitude }) => {
             <div className="container">
                 <div className="searchBar" >
                     <h4>Enter Zip/City:</h4>
-                    <input type="text" placeholder=" City/Zip " onChange={handleChange}/>
+                    <input type="text" placeholder=" City/Zip " onChange={handleChange} onKeyDown={handleKeyDown} />
                     <button type="submit" style={{ 'marginLeft': '10px' }} onClick={googleSearch}>Search</button>
                 </div>
                 <div className="searchBar">
-                    <MyGoogleMap curLatitude={curLatitude} curLongitude={curLongitude}/> 
+                    <MyGoogleMap curLatitude={curLatitude} curLongitude={curLongitude} />
                 </div>
             </div>
 
