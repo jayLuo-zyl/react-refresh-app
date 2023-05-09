@@ -50,7 +50,7 @@ const GoogleMap = ({ initLatitude, initLongitude }) => {
                     <input type="text" placeholder=" City/Zip " onChange={handleChange} onKeyDown={handleKeyDown} />
                     <button type="submit" style={{ 'marginLeft': '10px' }} onClick={googleSearch}>Search</button>
                 </div>
-                <div className="searchBar">
+                <div className="mapSize">
                     <MyGoogleMap curLatitude={curLatitude} curLongitude={curLongitude} />
                 </div>
             </div>
