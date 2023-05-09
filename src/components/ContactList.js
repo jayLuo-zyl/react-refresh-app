@@ -18,8 +18,10 @@ const ContactList = ({ contacts, addedString }) => {
                 <thead>
                     <tr>
                         <th>Name</th>
-
                         <th>Phone</th>
+                        <th>City</th>
+                        <th>Zip</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -28,6 +30,8 @@ const ContactList = ({ contacts, addedString }) => {
                             <tr key={index}>
                                 <td>{contact.name}</td>
                                 <td>{contact.phone}</td>
+                                <td>{contact.city}</td>
+                                <td>{contact.zip}</td>
                             </tr>
                         );
                     })}
