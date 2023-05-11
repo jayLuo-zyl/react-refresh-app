@@ -13,6 +13,7 @@ const WeatherByLocation = ({ user, city, zip }) => {
     // const antiochLat = "37.958248"
     // const antiochLon = "-121.752881"
     // const url = "https://api.openweathermap.org/data/2.5/weather?lat="+antiochLat+"&lon="+antiochLon+"&appid=<API KEY>"
+
     const url = "http://api.openweathermap.org/data/2.5/forecast?zip=" + zip + ",us&appid=" + process.env.REACT_APP_WEATHER_MAP_API_KEY
     const fetchWeatherData = async () => {
         try {
