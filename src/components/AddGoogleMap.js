@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MyGoogleMap from "./BuildGoogleMap";
 
-// Funtional Component: without state
+// Funtional Component: with useState
 
 // Uisng Arrow Function
 const GoogleMap = ({ initLatitude, initLongitude }) => {

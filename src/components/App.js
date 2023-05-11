@@ -5,6 +5,7 @@ import ContactList from "./ContactList";
 import ContactCard from "./ContactCard";
 import FormCustom from './Form';
 import GoogleMap from './AddGoogleMap';
+import WeatherByLocation from './AddWeather';
 
 // import SearchBar from './SearchBar';
 
@@ -48,6 +49,7 @@ function App() {
   return (
     <div>
       <ContactList contacts={contacts} addedString="A testing" />
+      <WeatherByLocation city={contacts[1].city} zip={contacts[1].zip} user={contacts[1].name} />
       <ContactCard />
       <AddNew />
       <FormCustom myStyles={myStyles} />
