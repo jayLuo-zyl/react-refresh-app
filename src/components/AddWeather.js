@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-// Funtional Component: with useState, React data fetch
+// Funtional Component: with useState, useEffect, React data fetch
 
 const WeatherByLocation = ({ user, city, zip }) => {
     const [weatherData, setWeatherData] = useState(null);
@@ -13,7 +13,7 @@ const WeatherByLocation = ({ user, city, zip }) => {
     // const antiochLat = "37.958248"
     // const antiochLon = "-121.752881"
     // const url = "https://api.openweathermap.org/data/2.5/weather?lat="+antiochLat+"&lon="+antiochLon+"&appid=<API KEY>"
-    const url = "http://api.openweathermap.org/data/2.5/forecast?zip=" + zip + ",us&appid=11af49af7399e970dbc2d366ee679a1b"
+    const url = "http://api.openweathermap.org/data/2.5/forecast?zip=" + zip + ",us&appid=" + process.env.REACT_APP_WEATHER_MAP_API_KEY
     const fetchWeatherData = async () => {
         try {
             const response = await fetch(url);
